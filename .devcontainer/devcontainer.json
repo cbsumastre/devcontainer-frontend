@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "development container vscode (frontend)",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-vscode.live-server",
+				"analytic-signal.preview-pdf",
+				"johnstoncode.svn-scm",
+				"johnpapa.vscode-peacock"
+			]
+		}
+	},
+	"containerUser": "cbsumastre",
+	"postCreateCommand": "bash ./.devcontainer/scripts/init.sh",
+	"shutdownAction": "stopContainer"
+}
