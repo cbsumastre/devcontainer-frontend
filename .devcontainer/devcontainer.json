@@ -1,11 +1,15 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "development container vscode (frontend)",
+	"name": "Máster FrontEnd Online LemonCode XVII - Layout Laboratorio Básico",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": "."
+		"context": ".",
+		"args": {
+			"USERNAME": "cbsumastre",
+			"USER_UID": 1001
+		}
 	},
 	// Configure tool-specific properties.
 	"customizations": {
@@ -16,10 +20,14 @@
 				"ms-vscode.live-server",
 				"analytic-signal.preview-pdf",
 				"johnstoncode.svn-scm",
-				"johnpapa.vscode-peacock"
+				"bradlc.vscode-tailwindcss",
+				"sdras.night-owl",
+				"ms-vscode.vscode-typescript-next",
+				"yoavbls.pretty-ts-errors"
 			]
 		}
 	},
+	"remoteUser": "cbsumastre",
 	"containerUser": "cbsumastre",
 	"postCreateCommand": "bash ./.devcontainer/scripts/init.sh",
 	"shutdownAction": "stopContainer"

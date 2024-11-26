@@ -8,4 +8,3 @@ nvm install 20
 
 git config --global user.name "Carlos Blázquez Sumastre"
 git config --global user.email "cbsumastre@gmail.com"
-git config --global init.defaultBranch main
