@@ -1,21 +1,15 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Máster FrontEnd Online LemonCode XVII - Layout Laboratorio Básico",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"name": "Dev container frontend",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": ".",
-		"args": {
-			"USERNAME": "cbsumastre",
-			"USER_UID": 1001
-		}
+		"context": "."
 	},
-	// Configure tool-specific properties.
 	"customizations": {
-		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.insertSpaces": true
+			},
 			"extensions": [
 				"ms-vscode.live-server",
 				"analytic-signal.preview-pdf",
@@ -23,12 +17,16 @@
 				"bradlc.vscode-tailwindcss",
 				"sdras.night-owl",
 				"ms-vscode.vscode-typescript-next",
-				"yoavbls.pretty-ts-errors"
+				"yoavbls.pretty-ts-errors",
+				"ritwickdey.LiveServer"
 			]
 		}
 	},
-	"remoteUser": "cbsumastre",
-	"containerUser": "cbsumastre",
-	"postCreateCommand": "bash ./.devcontainer/scripts/init.sh",
+	"remoteUser": "vscode",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+	],
+	"workspaceFolder": "/workspace",
+	"postCreateCommand": "bash ./.devcontainer/scripts/install-nvm.sh",
 	"shutdownAction": "stopContainer"
 }
