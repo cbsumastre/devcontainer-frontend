@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get -y install --no-install-recommends  \ 
-    && apt-get install -y subversion git-all iputils-ping curl telnet  vim \ 
+    && apt-get install -y subversion git-all iputils-ping curl telnet  vim unzip wget \ 
     && apt-get -y autoclean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
