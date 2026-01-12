@@ -35,6 +35,6 @@ WORKDIR /workspaces
 # Switch to VS Code user
 USER vscode
 
-EXPOSE 3000 4200 8080
+EXPOSE 3000 4200 8080 5678
 
 CMD ["/bin/bash"]

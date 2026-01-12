@@ -7,6 +7,7 @@ curl -fsSL https://bun.sh/install | bash
 
 source /home/vscode/.nvm/nvm.sh
 
-nvm install 22
+nvm install 20
 
 npm install -g yarn
+

@@ -1,5 +1,5 @@
 {
-	"name": "Dev container frontend",
+	"name": "n8n + MCP Automatización con Node",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "."
